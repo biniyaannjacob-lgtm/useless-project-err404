@@ -1,0 +1,451 @@
+<DOCTYPE html>
+<html lang="en"
+
+<head>
+
+     <meta charset="UTF-8">
+
+     <meta name="viewport"
+
+content="width=device-width,initial-scale=1.0">
+
+       <title>Keyboard Psycologist^TM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="badge">
+                USELESS PROJECTS™
+            </div>
+
+            <h1>
+                ⌨️ Keyboard Psychologist™
+            </h1>
+
+            <p>
+                Because apparently your keyboard knows
+                you better than your friends.
+            </p>
+
+        </header>
+
+
+        <!-- CONTROL PANEL -->
+
+        <section class="control-panel">
+
+            <div id="timer">
+                00:00
+            </div>
+
+            <button id="startButton">
+                ▶ START SESSION
+            </button>
+
+            <button id="stopButton" disabled>
+                ⏹ STOP
+            </button>
+
+            <button id="resetButton">
+                ↻ RESET
+            </button>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <section class="card status-card">
+
+            <h2 id="status">
+                Ready to analyse your keyboard.
+            </h2>
+
+            <p id="lastKey">
+                Last key: —
+            </p>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <div class="icon">
+                    ⌨️
+                </div>
+
+                <div class="label">
+                    TOTAL KEYS
+                </div>
+
+                <div id="totalKeys"
+                     class="number">
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="icon">
+                    ⌫
+                </div>
+
+                <div class="label">
+                    BACKSPACES
+                </div>
+
+                <div id="backspaceCount"
+                     class="number">
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="icon">
+                    ␣
+                </div>
+
+                <div class="label">
+                    SPACES
+                </div>
+
+                <div id="spaceCount"
+                     class="number">
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="icon">
+                    ↵
+                </div>
+
+                <div class="label">
+                    ENTERS
+                </div>
+
+                <div id="enterCount"
+                     class="number">
+                    0
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- TYPING SPEED -->
+
+        <section class="card speed-card">
+
+            <h2>
+                ⚡ Typing Speed
+            </h2>
+
+            <div id="wpm">
+                0 WPM
+            </div>
+
+            <p>
+                Words per minute
+            </p>
+
+        </section>
+
+
+        <!-- VIRTUAL KEYBOARD -->
+
+        <section class="card keyboard-section">
+
+            <h2>
+                ⌨️ Your Keyboard
+            </h2>
+
+            <p class="muted">
+                Press keys on your physical keyboard.
+            </p>
+
+
+            <div class="keyboard">
+
+
+                <div class="key-row">
+
+                    <button class="key"
+                            data-key="q">
+                        Q
+                    </button>
+
+                    <button class="key"
+                            data-key="w">
+                        W
+                    </button>
+
+                    <button class="key"
+                            data-key="e">
+                        E
+                    </button>
+
+                    <button class="key"
+                            data-key="r">
+                        R
+                    </button>
+
+                    <button class="key"
+                            data-key="t">
+                        T
+                    </button>
+
+                    <button class="key"
+                            data-key="y">
+                        Y
+                    </button>
+
+                    <button class="key"
+                            data-key="u">
+                        U
+                    </button>
+
+                    <button class="key"
+                            data-key="i">
+                        I
+                    </button>
+
+                    <button class="key"
+                            data-key="o">
+                        O
+                    </button>
+
+                    <button class="key"
+                            data-key="p">
+                        P
+                    </button>
+
+                </div>
+
+
+                <div class="key-row">
+
+                    <button class="key"
+                            data-key="a">
+                        A
+                    </button>
+
+                    <button class="key"
+                            data-key="s">
+                        S
+                    </button>
+
+                    <button class="key"
+                            data-key="d">
+                        D
+                    </button>
+
+                    <button class="key"
+                            data-key="f">
+                        F
+                    </button>
+
+                    <button class="key"
+                            data-key="g">
+                        G
+                    </button>
+
+                    <button class="key"
+                            data-key="h">
+                        H
+                    </button>
+
+                    <button class="key"
+                            data-key="j">
+                        J
+                    </button>
+
+                    <button class="key"
+                            data-key="k">
+                        K
+                    </button>
+
+                    <button class="key"
+                            data-key="l">
+                        L
+                    </button>
+
+                </div>
+
+
+                <div class="key-row">
+
+                    <button class="key"
+                            data-key="z">
+                        Z
+                    </button>
+
+                    <button class="key"
+                            data-key="x">
+                        X
+                    </button>
+
+                    <button class="key"
+                            data-key="c">
+                        C
+                    </button>
+
+                    <button class="key"
+                            data-key="v">
+                        V
+                    </button>
+
+                    <button class="key"
+                            data-key="b">
+                        B
+                    </button>
+
+                    <button class="key"
+                            data-key="n">
+                        N
+                    </button>
+
+                    <button class="key"
+                            data-key="m">
+                        M
+                    </button>
+
+                </div>
+
+
+                <div class="key-row special-row">
+
+                    <button class="key special-key"
+                            data-key=" ">
+                        SPACE
+                    </button>
+
+                    <button class="key special-key"
+                            data-key="Backspace">
+                        ⌫ BACKSPACE
+                    </button>
+
+                    <button class="key special-key"
+                            data-key="Enter">
+                        ↵ ENTER
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- MOST USED KEY -->
+
+        <section class="card most-used">
+
+            <h2>
+                🔥 Most Abused Key
+            </h2>
+
+            <div id="mostUsedKey">
+                —
+            </div>
+
+            <p id="mostUsedMessage">
+                Your keyboard is waiting for evidence.
+            </p>
+
+        </section>
+
+
+        <!-- HEATMAP -->
+
+        <section class="card">
+
+            <h2>
+                🔥 Keyboard Heatmap
+            </h2>
+
+            <p class="muted">
+                Frequently used letters become more suspicious.
+            </p>
+
+            <div id="heatmap">
+
+                Start typing to generate your heatmap.
+
+            </div>
+
+        </section>
+
+
+        <!-- DIAGNOSIS -->
+
+        <section class="diagnosis">
+
+            <div class="scientific">
+                COMPLETELY SCIENTIFIC™ ANALYSIS
+            </div>
+
+            <div id="diagnosisEmoji">
+                🧠
+            </div>
+
+            <h2 id="diagnosis">
+                Diagnosis Pending...
+            </h2>
+
+            <p id="diagnosisText">
+                Start typing to allow our highly questionable
+                psychological analysis to begin.
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            Keyboard Psychologist™
+
+            <br>
+
+            No keyboards were professionally diagnosed.
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
