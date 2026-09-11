@@ -1,644 +1,288 @@
+/* Base Reset & Centering */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background:
-        radial-gradient(
-            circle at top,
-            #261344,
-            #08080d 60%
-        );
-
-    color: white;
-
+    background-color: #0f0f1d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     min-height: 100vh;
-
-}
-
-
-.container {
-
-    width: 92%;
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 45px 0;
-
-}
-
-
-/* HEADER */
-
-header {
-
+    padding: 20px;
     text-align: center;
-
-    margin-bottom: 35px;
-
 }
 
-
-.badge {
-
-    display: inline-block;
-
-    border: 1px solid #8b5cf6;
-
-    color: #c4b5fd;
-
-    padding: 8px 16px;
-
-    border-radius: 30px;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 18px;
-
+/* Header Section */
+header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1e1e38;
 }
-
 
 header h1 {
-
-    font-size:
-        clamp(
-            36px,
-            7vw,
-            70px
-        );
-
-    margin-bottom: 15px;
-
+    font-size: 1.5rem;
+    color: #e0e0e0;
 }
 
-
-header p {
-
-    color: #a1a1aa;
-
-    font-size: 18px;
-
-}
-
-
-/* CONTROL PANEL */
-
-.control-panel {
-
-    background: #111118;
-
-    border: 1px solid #292932;
-
-    border-radius: 20px;
-
-    padding: 25px;
-
+/* Main Layout Container */
+.container {
+    width: 100%;
+    max-width: 850px;
     display: flex;
-
-    justify-content: center;
-
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+}
 
-    flex-wrap: wrap;
+/* Judgemental Eyes Container */
+/* Judgemental Eyes Container */
+.eyes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin: 15px 0;
+}
 
+/* Eye Pair Wrapper to keep them side-by-side */
+.eyes-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
-
-    margin-bottom: 20px;
-
 }
 
-
-#timer {
-
-    font-size: 32px;
-
-    font-weight: bold;
-
-    min-width: 100px;
-
-    text-align: center;
-
+.eye {
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
 }
 
+.pupil {
+    width: 14px;
+    height: 14px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+}
+/* Control Buttons Row */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
 
-button {
-
-    font-family: inherit;
-
+.btn {
+    padding: 10px 18px;
     border: none;
-
-    cursor: pointer;
-
-}
-
-
-.control-panel button {
-
-    padding: 13px 20px;
-
-    border-radius: 10px;
-
-    background: #27272f;
-
-    color: white;
-
+    border-radius: 6px;
     font-weight: bold;
-
+    cursor: pointer;
+    transition: transform 0.1s ease, opacity 0.2s;
 }
 
-
-#startButton {
-
-    background: #7c3aed;
-
+.btn:hover {
+    transform: translateY(-2px);
 }
 
-
-#startButton:hover {
-
-    background: #8b5cf6;
-
-}
-
-
-.control-panel button:disabled {
-
+.btn:disabled {
     opacity: 0.4;
-
     cursor: not-allowed;
-
+    transform: none;
 }
 
+.btn.start { background-color: #2ed573; color: #000; }
+.btn.stop { background-color: #ff4757; color: #fff; }
+.btn.therapy { background-color: #00d2d3; color: #000; }
+.btn.panic { background-color: #ff6b6b; color: #fff; }
+.btn.advice { background-color: #ffa502; color: #000; }
 
-/* CARDS */
-
-.card {
-
-    background: #111118;
-
-    border: 1px solid #292932;
-
-    border-radius: 20px;
-
-    padding: 30px;
-
-    margin-bottom: 20px;
-
+/* Status & Warning Text */
+.status {
+    font-size: 1.1rem;
+    color: #00d2d3;
+    min-height: 24px;
 }
 
-
-.status-card {
-
-    text-align: center;
-
+.warning-text {
+    color: #ff4757;
+    font-weight: bold;
+    min-height: 20px;
 }
 
-
-.status-card h2 {
-
-    margin-bottom: 10px;
-
+/* Middle Section: Target Text */
+.middle-section {
+    background: #18182d;
+    border: 1px solid #2d2d4d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
 }
 
-
-.status-card p {
-
-    color: #a1a1aa;
-
+.middle-section h2 {
+    font-size: 1.2rem;
+    color: #aaaaff;
+    margin-bottom: 12px;
 }
 
+#target-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
 
-/* STATISTICS */
+/* Progress Bar */
+.progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
 
-.stats {
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #2b2b48;
+    border-radius: 6px;
+    overflow: hidden;
+}
 
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00d2d3, #2ed573);
+    transition: width 0.2s ease;
+}
+
+#progress-text {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+/* Stats Section Grid */
+.stats-section {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 15px;
-
-    margin-bottom: 20px;
-
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 100%;
 }
-
 
 .stat-card {
-
-    background: #111118;
-
-    border: 1px solid #292932;
-
-    border-radius: 18px;
-
-    padding: 25px;
-
-    text-align: center;
-
-}
-
-
-.icon {
-
-    font-size: 30px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.label {
-
-    color: #a1a1aa;
-
-    font-size: 12px;
-
-    margin-bottom: 8px;
-
-}
-
-
-.number {
-
-    font-size: 35px;
-
-    font-weight: bold;
-
-}
-
-
-/* SPEED */
-
-.speed-card {
-
-    text-align: center;
-
-}
-
-
-#wpm {
-
-    font-size: 45px;
-
-    color: #a78bfa;
-
-    font-weight: bold;
-
-    margin: 10px;
-
-}
-
-
-.speed-card p {
-
-    color: #a1a1aa;
-
-}
-
-
-/* KEYBOARD */
-
-.keyboard-section {
-
-    text-align: center;
-
-}
-
-
-.keyboard-section h2 {
-
-    margin-bottom: 8px;
-
-}
-
-
-.muted {
-
-    color: #a1a1aa;
-
-}
-
-
-.keyboard {
-
-    margin-top: 25px;
-
-}
-
-
-.key-row {
-
+    background: #18182d;
+    border: 1px solid #2d2d4d;
+    padding: 15px 10px;
+    border-radius: 8px;
     display: flex;
-
-    justify-content: center;
-
-    gap: 7px;
-
-    margin-bottom: 7px;
-
+    flex-direction: column;
+    gap: 6px;
 }
 
+.stat-card h3 {
+    font-size: 0.85rem;
+    color: #8888aa;
+}
+
+.stat-card span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Virtual Keyboard */
+.keyboard-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 6px;
+}
 
 .key {
-
-    width: 55px;
-
-    height: 55px;
-
-    background: #1c1c25;
-
-    color: white;
-
-    border: 1px solid #40404a;
-
-    border-radius: 9px;
-
+    background: #2b2b48;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 5px;
     font-weight: bold;
-
-    transition: 0.12s;
-
+    font-size: 0.9rem;
+    min-width: 38px;
+    transition: background 0.15s ease, transform 0.05s;
 }
 
+.key.wide { min-width: 110px; }
+.key.spacebar { min-width: 280px; }
 
 .key.active {
-
-    background: #8b5cf6;
-
-    transform:
-        translateY(3px)
-        scale(1.08);
-
-    box-shadow:
-        0 0 25px #8b5cf6;
-
+    transform: scale(0.92);
 }
 
-
-.special-row {
-
-    margin-top: 12px;
-
+.key.confiscated {
+    background: #ff4757 !important;
+    text-decoration: line-through;
+    opacity: 0.6;
 }
 
-
-.special-key {
-
-    width: 170px;
-
+/* Advice & Diagnosis Sections */
+.advice-section, .diagnosis-section {
+    background: #18182d;
+    border: 1px solid #2d2d4d;
+    padding: 18px;
+    border-radius: 10px;
+    width: 100%;
 }
 
-
-/* MOST USED */
-
-.most-used {
-
-    text-align: center;
-
+#advice-display, #diagnosis-display {
+    margin-top: 10px;
+    font-style: italic;
+    color: #d1d1e0;
 }
 
-
-#mostUsedKey {
-
-    font-size: 80px;
-
-    font-weight: bold;
-
-    color: #a78bfa;
-
-    margin: 15px;
-
+.destruct-text {
+    margin-top: 8px;
+    color: #ff6b6b;
+    font-size: 0.85rem;
 }
 
-
-#mostUsedMessage {
-
-    color: #a1a1aa;
-
+/* Panic Mode Effect */
+.panic-mode {
+    background-color: #ff0000 !important;
+    animation: flash 0.5s infinite alternate;
 }
 
-
-/* HEATMAP */
-
-#heatmap {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(10, 1fr);
-
-    gap: 8px;
-
-    margin-top: 25px;
-
+@keyframes flash {
+    0% { background-color: #ff0000; }
+    100% { background-color: #000000; }
 }
 
-
-.heat-key {
-
-    background: #1c1c25;
-
-    border: 1px solid #3f3f46;
-
-    border-radius: 8px;
-
-    padding: 15px 5px;
-
-    font-weight: bold;
-
-    transition: 0.2s;
-
-}
-
-
-/* DIAGNOSIS */
-
-.diagnosis {
-
-    background:
-        linear-gradient(
-            135deg,
-            #1b1127,
-            #111118
-        );
-
-    border: 1px solid #8b5cf6;
-
-    border-radius: 25px;
-
-    padding: 50px 25px;
-
-    text-align: center;
-
-    margin-bottom: 30px;
-
-}
-
-
-.scientific {
-
-    color: #a78bfa;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
-
-}
-
-
-#diagnosisEmoji {
-
-    font-size: 65px;
-
-    margin-bottom: 10px;
-
-}
-
-
-#diagnosis {
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
-
-}
-
-
-#diagnosisText {
-
-    color: #c4c4cc;
-
-    max-width: 650px;
-
-    margin: auto;
-
-    line-height: 1.6;
-
-    font-size: 18px;
-
-}
-
-
-/* FOOTER */
-
-footer {
-
-    text-align: center;
-
-    color: #52525b;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-
-    padding: 20px;
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-    .stats {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 600px) {
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-
-    .key {
-
-        width: 42px;
-
-        height: 45px;
-
-        font-size: 11px;
-
-    }
-
-
-    .special-key {
-
-        width: 130px;
-
-    }
-
-
-    #heatmap {
-
-        grid-template-columns:
-            repeat(7, 1fr);
-
-    }
-
-}
-
-
-@media (max-width: 500px) {
-
-    .container {
-
-        width: 95%;
-
-    }
-
-
-    .key-row {
-
-        gap: 3px;
-
-    }
-
-
-    .key {
-
-        width: 27px;
-
-        height: 38px;
-
-        font-size: 9px;
-
-    }
-
-
-    .special-key {
-
-        width: 85px;
-
-        font-size: 8px;
-
-    }
-
-
-    #diagnosis {
-
-        font-size: 28px;
-
-    }
-
-
-    #heatmap {
-
-        grid-template-columns:
-            repeat(5, 1fr);
-
-    }
-
 }

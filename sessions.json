@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1789119049230,
+    "timestamp": "2026-09-11T09:30:49.230Z",
+    "totalKeys": 126,
+    "backspaces": 4,
+    "spaces": 18,
+    "enters": 0,
+    "diagnosis": "Diagnosis: Excessive Hesitation. You create physical space between words because you fear commitment.",
+    "disabledKeysCount": 1
+  },
+  {
+    "id": 1789119875782,
+    "timestamp": "2026-09-11T09:44:35.782Z",
+    "totalKeys": 259,
+    "backspaces": 49,
+    "spaces": 22,
+    "enters": 0,
+    "diagnosis": "Diagnosis: Extreme Regret Syndrome. You spend more time taking back your words than saying them.",
+    "disabledKeysCount": 1
+  },
+  {
+    "id": 1789120872716,
+    "timestamp": "2026-09-11T10:01:12.716Z",
+    "totalKeys": 56,
+    "backspaces": 1,
+    "spaces": 9,
+    "enters": 0,
+    "diagnosis": "Diagnosis: Dangerously Normal. Your typing lacks dramatic flair. Seek professional chaos.",
+    "disabledKeysCount": 1
+  },
+  {
+    "id": 1789121928491,
+    "timestamp": "2026-09-11T10:18:48.491Z",
+    "totalKeys": 65,
+    "backspaces": 3,
+    "spaces": 5,
+    "enters": 0,
+    "diagnosis": "Diagnosis: Dangerously Normal. Your typing lacks dramatic flair. Seek professional chaos.",
+    "disabledKeysCount": 1
+  },
+  {
+    "id": 1789123699859,
+    "timestamp": "2026-09-11T10:48:19.859Z",
+    "totalKeys": 13,
+    "backspaces": 0,
+    "spaces": 2,
+    "enters": 0,
+    "diagnosis": "Diagnosis: Dangerously Normal. Your typing lacks dramatic flair. Seek professional chaos.",
+    "disabledKeysCount": 0
+  }
+]
