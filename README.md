@@ -102,12 +102,12 @@ Open `index.html` directly in any web browser, or launch it using VS Code Live S
 ---
 
 ## Project Screenshots
-
-| Interface Layout | Judgement & Heatmap |
-| --- | --- |
-| *Add screenshot of main layout here* | *Add screenshot of virtual keyboard & eyes here* |
+![alt text](image.png)
 
 ---
+
+## Video Upload
+https://drive.google.com/drive/folders/1IOuLDFt7oL8px4RCNNehOjEVHgGOQ0k0?usp=sharing
 
 ## Team Contributions
 
